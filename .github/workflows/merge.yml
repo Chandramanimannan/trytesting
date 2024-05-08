@@ -13,11 +13,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Merge to Main
-        run: |
-          git fetch origin
-          git checkout main
-          git merge --no-ff ${{ github.event.pull_request.head.ref }} -m "Merge pull request #${{ github.event.pull_request.number }}"
+        run: git fetch
+      
 
-      - name: Push Changes
-        run: |
-          git push origin main
+      - name: merge Changes
+        run: git merge 
