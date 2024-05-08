@@ -13,7 +13,6 @@ on:
 jobs:
   test:
     runs-on: self-hosted
-    services:
 
     steps:
       - name: Checkout code
